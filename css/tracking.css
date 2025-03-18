@@ -1,0 +1,384 @@
+/* --- Global Variables --- */
+:root {
+  --back: #eeeeee;
+  --blue: #0082d2;
+  --green: #33DDAA;
+  --gray: #777777;
+  --size: 200px;
+}
+
+/* --- Base Styles --- */
+body, html {
+  background: var(--back);
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--gray);
+}
+
+/* --- Tracking Bar Styles --- */
+/* Tracking Bar Container */
+.tracking-wrapper {
+  margin: 30px auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.tracking * {
+  padding: 0;
+  margin: 0;
+}
+.tracking {
+  width: var(--size);
+  max-width: 100%;
+  position: relative;
+}
+.tracking .empty-bar {
+  background: #ddd;
+  position: absolute;
+  width: 90%;
+  height: 20%;
+  top: 40%;
+  margin-left: 5%;
+}
+.tracking .color-bar {
+  background: var(--blue);
+  position: absolute;
+  height: 20%;
+  top: 40%;
+  margin-left: 5%;
+  transition: all 0.5s;
+}
+.tracking ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.tracking ul > li {
+  background: #ddd;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 1;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.5s;
+  display: inline-block;
+  position: relative;
+  width: 10%;
+}
+.tracking ul > li .el {
+  position: relative;
+  margin-top: 100%;
+}
+.tracking ul > li .el i {
+  position: absolute;
+  bottom: 100%;
+  left: 8%;
+  margin-bottom: 12%;
+  color: #fff;
+  font-size: 100%;
+  display: none;
+}
+.tracking ul > li .txt {
+  color: #999;
+  position: absolute;
+  top: 120%;
+  left: -75%;
+  text-align: center;
+  width: 250%;
+  font-size: 0.75rem;
+}
+
+/* Progress Fill Widths */
+.tracking .progress-0 .color-bar { width: 0%; }
+.tracking .progress-1 .color-bar { width: 15%; }
+.tracking .progress-2 .color-bar { width: 30%; }
+.tracking .progress-3 .color-bar { width: 45%; }
+.tracking .progress-4 .color-bar { width: 60%; }
+.tracking .progress-5 .color-bar { width: 75%; }
+.tracking .progress-6 .color-bar { width: 90%; }
+.tracking .progress-7 .color-bar { width: 90%; }
+
+/* Bullet Coloring for Completed Steps */
+.tracking .progress-0 > ul > li.bullet-1,
+.tracking .progress-1 > ul > li.bullet-1,
+.tracking .progress-2 > ul > li.bullet-1,
+.tracking .progress-3 > ul > li.bullet-1,
+.tracking .progress-4 > ul > li.bullet-1,
+.tracking .progress-5 > ul > li.bullet-1,
+.tracking .progress-6 > ul > li.bullet-1,
+.tracking .progress-7 > ul > li.bullet-1 { 
+  background-color: var(--blue); 
+}
+
+.tracking .progress-2 > ul > li.bullet-2,
+.tracking .progress-3 > ul > li.bullet-2,
+.tracking .progress-4 > ul > li.bullet-2,
+.tracking .progress-5 > ul > li.bullet-2,
+.tracking .progress-6 > ul > li.bullet-2,
+.tracking .progress-7 > ul > li.bullet-2 { 
+  background-color: var(--blue); 
+}
+
+.tracking .progress-4 > ul > li.bullet-3,
+.tracking .progress-5 > ul > li.bullet-3,
+.tracking .progress-6 > ul > li.bullet-3,
+.tracking .progress-7 > ul > li.bullet-3 { 
+  background-color: var(--blue); 
+}
+
+.tracking .progress-6 > ul > li.bullet-4,
+.tracking .progress-7 > ul > li.bullet-4 { 
+  background-color: var(--blue); 
+}
+.tracking .progress-7 > ul > li.bullet-4 { 
+  background-color: var(--green); 
+}
+
+/* Display Check Icon for Completed Steps */
+.tracking .progress-1 > ul > li.bullet-1 .el i,
+.tracking .progress-2 > ul > li.bullet-1 .el i,
+.tracking .progress-3 > ul > li.bullet-1 .el i,
+.tracking .progress-4 > ul > li.bullet-1 .el i,
+.tracking .progress-5 > ul > li.bullet-1 .el i,
+.tracking .progress-6 > ul > li.bullet-1 .el i,
+.tracking .progress-7 > ul > li.bullet-1 .el i { 
+  display: block; 
+}
+.tracking .progress-3 > ul > li.bullet-2 .el i,
+.tracking .progress-4 > ul > li.bullet-2 .el i,
+.tracking .progress-5 > ul > li.bullet-2 .el i,
+.tracking .progress-6 > ul > li.bullet-2 .el i,
+.tracking .progress-7 > ul > li.bullet-2 .el i { 
+  display: block; 
+}
+.tracking .progress-5 > ul > li.bullet-3 .el i,
+.tracking .progress-6 > ul > li.bullet-3 .el i,
+.tracking .progress-7 > ul > li.bullet-3 .el i { 
+  display: block; 
+}
+.tracking .progress-7 > ul > li.bullet-4 .el i { 
+  display: block; 
+}
+
+/* Change Label Color When Completed */
+.tracking .progress-1 > ul > li.bullet-1 .txt,
+.tracking .progress-2 > ul > li.bullet-1 .txt,
+.tracking .progress-3 > ul > li.bullet-1 .txt,
+.tracking .progress-4 > ul > li.bullet-1 .txt,
+.tracking .progress-5 > ul > li.bullet-1 .txt,
+.tracking .progress-6 > ul > li.bullet-1 .txt,
+.tracking .progress-7 > ul > li.bullet-1 .txt { 
+  color: var(--blue); 
+}
+.tracking .progress-3 > ul > li.bullet-2 .txt,
+.tracking .progress-4 > ul > li.bullet-2 .txt,
+.tracking .progress-5 > ul > li.bullet-2 .txt,
+.tracking .progress-6 > ul > li.bullet-2 .txt,
+.tracking .progress-7 > ul > li.bullet-2 .txt { 
+  color: var(--blue); 
+}
+.tracking .progress-5 > ul > li.bullet-3 .txt,
+.tracking .progress-6 > ul > li.bullet-3 .txt,
+.tracking .progress-7 > ul > li.bullet-3 .txt { 
+  color: var(--blue); 
+}
+.tracking .progress-7 > ul > li.bullet-4 .txt { 
+  color: var(--blue); 
+}
+
+#modal-tracking {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+/* --- Tracking Controls --- */
+.controls {
+  margin: 90px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.controls > div {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.controls p,
+.controls button {
+  border: 0;
+  line-height: 20px;
+  padding: 15px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.controls button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.controls button i {
+  font-size: 1rem;
+  margin: 0 5px;
+}
+.controls button#prev { padding-right: 30px; }
+.controls button#next { padding-left: 30px; }
+.controls button:hover,
+.controls button:focus {
+  outline: none;
+  background-color: var(--green);
+}
+
+/* --- Tab Navigation Styles --- */
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: 2px solid #ddd;
+  margin: 30px;
+}
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--gray);
+  transition: color 0.3s, border-bottom 0.3s;
+  min-width: 100px;
+}
+.tab-button.active {
+  color: var(--blue);
+  font-weight: bold;
+  border-bottom: 3px solid var(--blue);
+}
+.tab-content {
+  display: none;
+  padding: 15px 30px;
+  margin: 0 30px;
+  background: #fff;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* --- Product Card Styles --- */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(33.333% - 10px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+.product-info {
+  padding: 10px;
+}
+.product-info h3 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+.product-info p {
+  margin: 0;
+  color: var(--blue);
+  font-weight: bold;
+}
+.product-info .extra-info {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* --- Quick View Modal Styles --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+.close-button:hover {
+  color: #000;
+}
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.modal-content h3 {
+  margin: 10px 0;
+}
+.modal-content p {
+  margin: 5px 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .tracking .empty-bar,
+  .tracking .color-bar {
+    left: 5%;
+    right: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}

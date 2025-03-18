@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/tracking.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="images/BAC LOGO11.png" alt="logo" class="logo1">
+                <span></span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="images/USER1.png" alt="User" class="USER1">
+            <div>
+                <p class="bold">Admin</p>
+                <p>User</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#" data-section="add-section">
+                    <i class='bx bxs-add-to-queue'></i>
+                    <span class="nav-item">Add Item</span>
+                </a>
+                <span class="tool">Add Item</span>
+            </li>
+            <li>
+                <a href="#" data-section="timeline-section">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="nav-item">Timeline</span>
+                </a>
+                <span class="tool">Timeline</span>
+            </li>
+            <li>
+                <a href="#" data-section="cat-section">
+                    <i class='bx bxs-category'></i>
+                    <span class="nav-item">Category</span>
+                </a>
+                <span class="tool">Category</span>
+            </li>
+            <li>
+                <a href="loginform.html">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="nav-item">Logout</span>
+                </a>
+                <span class="tool">Logout</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Dashboard</h1>
+
+        <!-- Category Section -->
+        <div id="cat-section" class="content-section" style="display: none;">
+            <div class="category-list">
+                <button class="collapsible">Categories</button>
+                <ul class="collapsible-content">
+                    <li data-category="all">All</li>
+                    <li data-category="computers">Computers</li>
+                    <li data-category="printers">Printers</li>
+                    <li data-category="networking">Networking</li>
+                    <li data-category="office supplies">Office Supplies</li>
+                    <li data-category="furniture">Furniture</li>
+                </ul>
+            </div>
+            <div id="product-container" class="product-container">
+                <!-- Product Cards Will Go Here -->
+                <!-- Computers Cards (6) -->
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod1.jpg" alt="Computer Product 1">
+                    <h3>ASUS VX248H 24" Widescreen LED Backlit LCD Monitor (Black)</h3>
+                    <p>A nice monitor</p>
+                </div>
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod2.jpg" alt="Computer Product 2">
+                    <h3>AMD Ryzen 5 5600G 6 Core / 12 Threads up to 4.4GHz</h3>
+                    <p>A fast CPU</p>
+                </div>
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod3.jpg" alt="Computer Product 3">
+                    <h3>LOGITECH COMBO GAMING G435 + G305 WHITE</h3>
+                    <p>Affordable combo!</p>
+                </div>
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod4.png" alt="Computer Product 4">
+                    <h3>Nvidia 5090 Graphics Card</h3>
+                    <p>Newest graphics card!</p>
+                </div>
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod5.jpg" alt="Computer Product 5">
+                    <h3>ASRock B450M Steel Legend - Motherboard - LDLC</h3>
+                    <p>A cool motherboard!</p>
+                </div>
+                <div class="product-card" data-category="computers">
+                    <img src="products_img/comprod6.jpg" alt="Computer Product 6">
+                    <h3>Ram Desktop G.Skill Trident Z ROYAL ELITE (F4-3600C16D-16GTEGC) 16GB</h3>
+                    <p>Fast and majestic RAM for the most demure gamer</p>
+                </div>
+                
+                <!-- Printers (6) -->
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod1.jpeg" alt="Computer Product 1">
+                    <h3>Epson Expression Premium XP-7100 Wireless All-in-One Color Inkjet</h3>
+                    <p>The go to premium printer!</p>
+                </div>
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod2.jpg" alt="Computer Product 2">
+                    <h3>Epson Artisan 837 All-In-One Color Inkjet Printer C11CB20201 B&H</h3>
+                    <p>Printer for artisans</p>
+                </div>
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod3.jpg" alt="Computer Product 3">
+                    <h3>Epson SureColor T3475 24" Wide-Format Wireless Printer SCT3475SR</h3>
+                    <p>For bigger prints</p>
+                </div>
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod4.jpg" alt="Computer Product 4">
+                    <h3>Epson SureColor T5270D 36" Dual Roll Large-Format SCT5270DR B&H</h3>
+                    <p>The bigger the better</p>
+                </div>
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod5.jpg" alt="Computer Product 5">
+                    <h3>EPSON EcoTank L8050 High Volume 6 Colour A4 Photo Printer 10x15cm</h3>
+                    <p>For a nice photo!</p>
+                </div>
+                <div class="product-card" data-category="printers">
+                    <img src="products_img/printprod6.jpg" alt="Computer Product 6">
+                    <h3>Epson Stylus Pro 11880 64" Large-Format Inkjet Printer SP11880K3</h3>                    
+                    <p>For premium and bigger prints</p>
+                </div>
+
+                <!-- Furniture (6) -->
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn1.jpg"Furniture Product 1">
+                    <h3>ÄPPLARYD 3-seat sofa, Lejde grey/black</h3>
+                    <p>Comfy.</p>
+                </div>
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn2.jpg" alt="Furniture Product 2">
+                    <h3>Flexsteel Bay Bridge Traditional Rolled Back Sofa</h3>
+                    <p>A brown comfy sofa</p>
+                </div>
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn3.jpg" alt="Furniture Product 3">
+                    <h3>Big L Shape Leather Sofa, Corner Sofa, Italian Leather Sofa Yh-305</h3>
+                    <p>Classy big sofa.</p>
+                </div>
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn4.jpg" alt="Furniture Product 4">
+                    <h3>Rasine 3-Seater Fabric Sofa (Latte) | Furniture & Home Décor</h3>
+                    <p>Minimalist</p>
+                </div>
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn5.jpg" alt="Furniture Product 5">
+                    <h3>2213 THREE-SEATER SOFA BY BORGE MOGENSEN</h3>
+                    <p>Crafted with passion</p>
+                </div>
+                <div class="product-card" data-category="furniture">
+                    <img src="products_img/furn6.jpg" alt="Furniture Product 6">
+                    <h3>Alesbury Sofa 1870438 by Signature Design by Ashley at Callan Furniture</h3>                      
+                    <p>A masterpiece.</p>
+                </div>
+
+                <!-- Networking (6) -->
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net1.jpg" alt=" Product 1">
+                    <h3>Cisco SG110D 110 Series 8-Port Unmanaged Network SG110D-08-NA</h3>
+                    <p>Cisco switch</p>
+                </div>
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net2.png" alt="networking Product 2">
+                    <h3>TP-Link TL-WA850RE | 300Mbps Universal Wi-Fi Range Extender</h3>
+                    <p>Wifi extender</p>
+                </div>
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net3.jpg" alt="networking Product 3">
+                    <h3>Netgear R7000 Nighthawk AC1900 Smart Wi-Fi Router R7000-100PAS</h3>
+                    <p>Gaming router</p>
+                </div>
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net4.jpg" alt="networking Product 4">
+                    <h3>IE-4000-4GS8GP4G-E | Zenitel</h3>
+                    <p>Cisco product</p>
+                </div>
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net5.jpg" alt="networkingProduct 5">
+                    <h3>TP-Link N600 Wireless Dual Band Gigabit ADSL2+ Modem TD-W8980</h3>
+                        
+                    <p>Modem.</p>
+                </div>
+                <div class="product-card" data-category="networking">
+                    <img src="products_img/net6.jpg" alt="networking Product 6">
+                    <h3>TP-Link M7000 4G LTE Mobile Wi-Fi Portable Modem Router</h3>
+                    <p>portable modem</p>
+                </div>
+
+                <!-- Office Supplies (6) -->
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office1.jpg" alt="Office Supplies Product 1">
+                    <h3>Stapler</h3>
+                    <p>Heavy-duty stapler for office use.</p>
+                </div>
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office2.jpg" alt="Office Supplies Product 2">
+                    <h3>Printer Paper</h3>
+                    <p>500 sheets of high-quality printer paper.</p>
+                </div>
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office3.jpeg" alt="Office Supplies Product 3">
+                    <h3>Desk Organizer</h3>
+                    <p>Keep your desk tidy with this organizer.</p>
+                </div>
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office4.jpeg" alt="Office Supplies Product 4">
+                    <h3>Pen Set</h3>
+                    <p>Set of 10 ballpoint pens.</p>
+                </div>
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office5.jpg" alt="Office Supplies Product 5">
+                    <h3>Notebook</h3>
+                    <p>200-page ruled notebook.</p>
+                </div>
+                <div class="product-card" data-category="office supplies">
+                    <img src="products_img/office6.jpeg" alt="Office Supplies Product 6">
+                    <h3>Paper Clips</h3>
+                    <p>Pack of 100 paper clips.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Item Section -->
+        <div id="add-section" class="content-section" style="display: none;">
+            <div class="timeline-form">
+                <h2>Add Item</h2>
+                <form id="timelineForm">
+                    <label for="event-title">Item type:</label>
+                    <input type="text" id="event-title" required>
+                    <label for="event-date">Date Needed:</label>
+                    <input type="date" id="event-date" required>
+                    <label for="event-description">Description:</label>
+                    <textarea id="event-description" rows="3" required></textarea>
+                    <button type="submit">Add Item</button>
+                </form>
+            </div>
+            <div class="timeline-table">
+                <h2>Item List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ITEM-ID</th>
+                            <th>NAME</th>
+                            <th>Description</th>
+                            <th>QUANTITY</th>
+                            <th>BIDDING</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timeline-body">
+                        <!-- Events will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div id="timeline-section" class="content-section" style="display: none;">
+            <div class="container1">
+                <div class="header">Competitive Bidding</div>
+                
+                <!-- Tab Navigation for My Purchase Section -->
+                <nav class="tabs" role="tablist">
+                    <button class="tab-button active" data-tab="all" role="tab" aria-selected="true">All</button>
+                    <button class="tab-button" data-tab="to-pay" role="tab" aria-selected="false">BAC review</button>
+                    <button class="tab-button" data-tab="to-ship" role="tab" aria-selected="false">BAC received</button>
+                    <button class="tab-button" data-tab="to-receive" role="tab" aria-selected="false">Consolodate</button>
+                    <button class="tab-button" data-tab="completed" role="tab" aria-selected="false">Forward to SPMU</button>
+                    <button class="tab-button" data-tab="cancelled" role="tab" aria-selected="false">Cancelled</button>
+                    <button class="tab-button" data-tab="return-refund" role="tab" aria-selected="false">Return/Refund</button>
+                </nav>
+
+                <!-- Tab Content Sections with Product Demonstration -->
+                <!-- All Products Tab -->
+                <section class="tab-content active" id="all" role="tabpanel">
+                    <h2>All Products</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product 1" data-price="$10.00" data-extra="">
+                        <img src="products_img/comprod1.jpg" alt="Product 1" />
+                        <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>$10.00</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-title="Product 2" data-price="$15.00" data-extra="">
+                        <img src="products_img/comprod2.jpg" alt="Product 2" />
+                        <div class="product-info">
+                        <h3>Product 2</h3>
+                        <p>$15.00</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-title="Product 3" data-price="$20.00" data-extra="">
+                        <img src="products_img/comprod3.jpg" alt="Product 3" />
+                        <div class="product-info">
+                        <h3>Product 3</h3>
+                        <p>$20.00</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- To Pay Tab -->
+                <section class="tab-content" id="to-pay" role="tabpanel">
+                    <h2>BAC review</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product A" data-price="$12.00" data-extra="Payment Due: 24 hrs">
+                        <img src="products_img/furn1.jpg" alt="Product A" />
+                        <div class="product-info">
+                        <h3>Product A</h3>
+                        <p>$12.00</p>
+                        <p class="extra-info">Payment Due: 24 hrs</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-title="Product B" data-price="$18.00" data-extra="Payment Due: 24 hrs">
+                        <img src="products_img/furn2.jpg" alt="Product B" />
+                        <div class="product-info">
+                        <h3>Product B</h3>
+                        <p>$18.00</p>
+                        <p class="extra-info">Payment Due: 24 hrs</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- To Ship Tab -->
+                <section class="tab-content" id="to-ship" role="tabpanel">
+                    <h2>BAC received</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product X" data-price="$22.00" data-extra="Shipping Fee: $5.00">
+                        <img src="products_img/net1.jpg" alt="Product X" />
+                        <div class="product-info">
+                        <h3>Product X</h3>
+                        <p>$22.00</p>
+                        <p class="extra-info">Shipping Fee: $5.00</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-title="Product Y" data-price="$25.00" data-extra="Shipping Fee: $5.00">
+                        <img src="products_img/comprod4.png" alt="Product Y" />
+                        <div class="product-info">
+                        <h3>Product Y</h3>
+                        <p>$25.00</p>
+                        <p class="extra-info">Shipping Fee: $5.00</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- To Receive Tab -->
+                <section class="tab-content" id="to-receive" role="tabpanel">
+                    <h2>Consolodate</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product M" data-price="$30.00" data-extra="Expected Delivery: Mar 20, 2025">
+                        <img src="https://via.placeholder.com/150" alt="Product M" />
+                        <div class="product-info">
+                        <h3>Product M</h3>
+                        <p>$30.00</p>
+                        <p class="extra-info">Expected Delivery: Mar 20, 2025</p>
+                        </div>
+                    </div>
+                    <div class="product-card" data-title="Product N" data-price="$35.00" data-extra="Expected Delivery: Mar 20, 2025">
+                        <img src="https://via.placeholder.com/150" alt="Product N" />
+                        <div class="product-info">
+                        <h3>Product N</h3>
+                        <p>$35.00</p>
+                        <p class="extra-info">Expected Delivery: Mar 20, 2025</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- Completed Tab -->
+                <section class="tab-content" id="completed" role="tabpanel">
+                    <h2>Forward to SPMU</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product Z" data-price="$40.00" data-extra="Rated: 4.5/5">
+                        <img src="https://via.placeholder.com/150" alt="Product Z" />
+                        <div class="product-info">
+                        <h3>Product Z</h3>
+                        <p>$40.00</p>
+                        <p class="extra-info">Rated: 4.5/5</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- Cancelled Tab -->
+                <section class="tab-content" id="cancelled" role="tabpanel">
+                    <h2>Cancelled Orders</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product Q" data-price="$12.00" data-extra="Order Cancelled - Refund Pending">
+                        <img src="https://via.placeholder.com/150" alt="Product Q" />
+                        <div class="product-info">
+                        <h3>Product Q</h3>
+                        <p>$12.00</p>
+                        <p class="extra-info">Order Cancelled - Refund Pending</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- Return/Refund Tab -->
+                <section class="tab-content" id="return-refund" role="tabpanel">
+                    <h2>Return/Refund Orders</h2>
+                    <div class="products">
+                    <div class="product-card" data-title="Product R" data-price="$18.00" data-extra="Refund Processed: $18.00 refunded">
+                        <img src="https://via.placeholder.com/150" alt="Product R" />
+                        <div class="product-info">
+                        <h3>Product R</h3>
+                        <p>$18.00</p>
+                        <p class="extra-info">Refund Processed: $18.00 refunded</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- Quick View Modal -->
+                <div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-extra"></p>
+      <div id="modal-tracking">
+         <strong>Current Status: </strong><span id="modal-status"></span>
+      </div>
+
+                    <!-- Tracking Bar Section -->
+                <div class="tracking-wrapper">
+                    <div class="tracking">
+                    <div id="progress" class="progress-0">
+                        <div class="empty-bar"></div>
+                        <div class="color-bar"></div>
+                        <ul>
+                        <li class="bullet-1">
+                            <div class="el"><i class='bx bx-check'></i></div>
+                            <div class="txt">Order Processed</div>
+                        </li>
+                        <li class="bullet-2">
+                            <div class="el"><i class='bx bx-check'></i></div>
+                            <div class="txt">Order Shipped</div>
+                        </li>
+                        <li class="bullet-3">
+                            <div class="el"><i class='bx bx-check'></i></div>
+                            <div class="txt">Order En Route</div>
+                        </li>
+                        <li class="bullet-4">
+                            <div class="el"><i class='bx bx-check'></i></div>
+                            <div class="txt">Order Arrived</div>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Tracking Controls -->
+                <div class="controls">
+                    <div>
+                    <button id="prev"><i class='bx bx-chevron-left'></i> Prev</button>
+                    <button id="next">Next <i class='bx bx-chevron-right'></i></button>
+                    </div>
+                    <div>
+                    <p>Step: <span id="step">0</span></p>
+                    </div>
+                </div>
+                </div>
+
+            </div>        
+        </div>
+    </div>
+    
+
+   
+    <script src="script/dashboard.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* Container for product cards */
+.product-container {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+}
+
+/* Styling for individual product cards */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 600px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image styling within product cards */
+.product-card img {
+    width: 80%;
+    height: auto;
+}
+
+/* Heading styling within product cards */
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Paragraph styling within product cards */
+.product-card p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px 10px;
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Category list styling */
+
+/* Style for the collapsible button within the category section */
+.category-list .collapsible {
+    background-color: #c0bfbf;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+/* Optional hover effect */
+.category-list .collapsible:hover {
+    background-color: #e0e0e0;
+}
+
+/* Icon indicator (plus/minus) */
+.category-list .collapsible:after {
+    content: '\002B'; /* plus sign */
+    font-size: 12px;
+    float: right;
+    margin-left: 5px;
+}
+
+.category-list .collapsible.active:after {
+    content: "\2212"; /* minus sign */
+}
+
+/* Collapsible content styling */
+.category-list .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* List items styling */
+.category-list .collapsible-content li {
+    padding: 10px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+
+.background{
+    background-color: #36454f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .container{
+      border-radius: 40px;
+      background-color: #fff;
+      max-width: 450px;
+      height: 900px;
+      .header{
+        border: 1px solid lightgray;
+        padding: 40px 0px 20px 0px;
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        .icon-back{
+          font-size: 30px;
+          color: #11D1A8;
+        } 
+        .order{
+          .order-number{
+            font-size: 20px;
+            font-weight: bold;
+            color: #0A0A0A;
+          }
+          .order-status{
+            color: #F29702;
+            font-weight: 600;
+          }
+        }
+        .icon-brand{
+          font-size: 30px;
+          color: #11D1A8;
+        }
+      }
+      .content{
+          border: 1px solid lightgray;
+          padding: 20px 0px;
+          margin-left: 10px;
+          margin-right: 10px;
+          .timeline{
+            .item{
+              &.active{
+                .item-description{
+                   &:before{
+                     background-color: #11D1A8;
+                   }
+                 }
+              }
+              position: relative;
+              border-bottom: 1px solid lightgray;
+              padding: 20px 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              &:last-child{
+                border-bottom: none;
+                &:before{
+                  display: none;
+                }
+              }
+              &:before{
+                border-left: 3px solid #11D1A8;
+                content: '';
+                z-index: 0;
+                height: 102%;
+                left: 135px;
+                position: absolute;
+                opacity: 0.4;
+              }
+              .item-label{
+                position: absolute;
+                .item-label-date{
+                  color: #A6A6A6;
+                  font-size: 17px;
+                  font-weight: 500;
+                  padding-bottom: 5px;
+                }
+                .item-label-hour{
+                  font-weight: 600;
+                  font-size: 19px;
+                  float: right;
+                }
+              }
+              .item-description{
+                &:before{
+                  border: 2px solid #11D1A8;
+                  width: 22px;
+                  height: 22px;
+                  border-radius: 100%;
+                  content: '';
+                  z-index: 0;
+                  left: 125px;
+                  position: absolute;
+                  background-color: #fff;
+                  display: block;
+                }
+                margin-left: 150px;
+                margin-bottom: 20px;
+                .item-description-status{
+                  font-weight: 600;
+                  font-size: 16px;
+                  padding-bottom: 5px;
+                }
+                .item-description-location{
+                  color: #A6A6A6;
+                  font-size: 15px;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+       }
+    }
+  }
+  
+  
